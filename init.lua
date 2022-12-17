@@ -1,2 +1,2 @@
-require("nikola")
-print("hello")
+require("nikola/keybindings")
+require("nikola/options")
