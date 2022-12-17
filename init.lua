@@ -1,1 +1,2 @@
 require("nikola")
+print("hello")
