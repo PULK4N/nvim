@@ -4,3 +4,6 @@ require("nikola/plugins")
 require("nikola/colorscheme")
 require("nikola/cmp")
 
+require("nikola/lsp")
+
+
