@@ -20,10 +20,10 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<escape-h>", "<C-w>h", opts)
-keymap("n", "<escape-j>", "<C-w>j", opts)
-keymap("n", "<escape-k>", "<C-w>k", opts)
-keymap("n", "<escape-l>", "<C-w>l", opts)
+keymap("n", "<escape>h", "<C-w>h", opts)
+keymap("n", "<escape>j", "<C-w>j", opts)
+keymap("n", "<escape>k", "<C-w>k", opts)
+keymap("n", "<escape>l", "<C-w>l", opts)
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
@@ -72,6 +72,6 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
-keymap("n", "<leader-f>", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<escape-f>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<escape-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<escape>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
