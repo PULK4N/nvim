@@ -6,4 +6,4 @@ require("nikola/cmp")
 require("nikola/lsp")
 require("nikola/telescope")
 require("nikola/treesitter")
-
+require("nikola/autopairs")
