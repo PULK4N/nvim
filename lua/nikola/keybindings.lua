@@ -25,8 +25,6 @@ keymap("n", "<escape>j", "<C-w>j", opts)
 keymap("n", "<escape>k", "<C-w>k", opts)
 keymap("n", "<escape>l", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-
 -- My keybindings
 keymap("n", "qq", ":q <Enter>", opts)
 keymap("n", "qwq", ":wq <Enter>", opts)
@@ -75,3 +73,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<escape>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
+
+-- Nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
