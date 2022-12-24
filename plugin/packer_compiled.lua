@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/home/nikola/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/nikola/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/nikola/.local/share/nvim/site/pack/packer/start/vim-bbye",
