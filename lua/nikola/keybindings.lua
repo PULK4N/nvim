@@ -80,4 +80,4 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-w>", ":Bdelete<cr>",opts)
 
 keymap("n", "<leader>l", ":Format<cr>", opts)
-
+keymap("n", "<leader>u", ":UndotreeToggle <cr>", opts)
