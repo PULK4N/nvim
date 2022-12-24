@@ -1,19 +1,10 @@
--- Find more schemas here: https://www.schemastore.org/json/
+local default_schemas = nil
+local status_ok, jsonls_settings = pcall(require, "nlspsettings.jsonls")
+if status_ok then
+  default_schemas = jsonls_settings.get_default_schemas()
+end
+
 local schemas = {
-  {
-    description = "Docker-compose configuration file",
-    fileMatch = {
-      "docker-compose.yml",
-    },
-    url = "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json",
-  },
-  {
-    description = "TypeScript compiler configuration file",
-    fileMatch = {
-      "angular-cli.json",
-    },
-    url = "https://raw.githubusercontent.com/angular/angular-cli/v10.1.6/packages/angular/cli/lib/config/schema.json",
-  },
   {
     description = "TypeScript compiler configuration file",
     fileMatch = {
@@ -177,19 +168,19 @@ local schemas = {
   },
 }
 
--- local function extend(tab1, tab2)
---   for _, value in ipairs(tab2 or {}) do
---     table.insert(tab1, value)
---   end
---   return tab1
--- end
+local function extend(tab1, tab2)
+  for _, value in ipairs(tab2) do
+    table.insert(tab1, value)
+  end
+  return tab1
+end
 
 local extended_schemas = extend(schemas, default_schemas)
 
 local opts = {
   settings = {
     json = {
-      schemas = schemas,
+      schemas = extended_schemas,
     },
   },
   setup = {
@@ -204,3 +195,4 @@ local opts = {
 }
 
 return opts
+

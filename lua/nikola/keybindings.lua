@@ -78,3 +78,6 @@ keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Bufferline
 keymap("n", "<C-w>", ":Bdelete<cr>",opts)
+
+keymap("n", "<leader>l", ":Format<cr>", opts)
+
