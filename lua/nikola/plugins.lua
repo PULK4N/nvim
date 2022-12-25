@@ -95,7 +95,8 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use { 'neoclide/coc.nvim',branch = 'release'} 
+
+  use 'puremourning/vimspector'
  -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
