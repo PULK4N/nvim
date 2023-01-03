@@ -79,7 +79,8 @@ return packer.startup(function(use)
 	  -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
-
+  
+  -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use "p00f/nvim-ts-rainbow"
 
@@ -90,12 +91,13 @@ return packer.startup(function(use)
 
   use "mbbill/undotree"
 
+  -- lualine (cool stuff showing on bottom)
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-
+  -- Vim spector
   use 'puremourning/vimspector'
  -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
