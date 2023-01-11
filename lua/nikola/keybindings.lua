@@ -18,6 +18,9 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- copy whole file
+keymap("n","yyy","gg^vG$y",opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<escape>h", "<C-w>h", opts)
@@ -26,9 +29,9 @@ keymap("n", "<escape>k", "<C-w>k", opts)
 keymap("n", "<escape>l", "<C-w>l", opts)
 
 -- My keybindings
-keymap("n", "qq", ":q <Enter>", opts)
+keymap("n", "<escape>e", ":q <Enter>", opts)
 keymap("n", "qwq", ":wq <Enter>", opts)
-keymap("n", "qqq", ":qa! <Enter>", opts) -- force quit without saving  
+keymap("n", "<escape>q", ":qa! <Enter>", opts) -- force quit without saving  
 keymap("n", "qw", ":w <Enter>", opts)
 
 -- Resize with arrows
@@ -68,6 +71,7 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<escape>", "<C-\\><C-N>", term_opts)
 
 
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
