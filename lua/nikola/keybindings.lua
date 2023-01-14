@@ -19,7 +19,16 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- copy whole file
-keymap("n","yyy","gg^vG$y",opts)
+keymap("n","<leader>y","gg^vG$y",opts)
+
+-- copy whole file
+keymap("n","<leader>d","gg^vG$d",opts)
+
+--- paste data over a whole file
+keymap("n","<leader>p","gg^vG$p",opts)
+
+-- save file 
+keymap("n","<leader>s",":w <Enter>",opts)
 
 -- Normal --
 -- Better window navigation
@@ -43,10 +52,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
--- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
