@@ -19,16 +19,16 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- copy whole file
-keymap("n","<leader>y","gg^vG$y",opts)
+keymap("n", "<leader>y", "gg^vG$y", opts)
 
 -- copy whole file
-keymap("n","<leader>d","gg^vG$d",opts)
+keymap("n", "<leader>d", "gg^vG$d", opts)
 
 --- paste data over a whole file
-keymap("n","<leader>p","gg^vG$p",opts)
+keymap("n", "<leader>p", "gg^vG$p", opts)
 
--- save file 
-keymap("n","<leader>s",":w <Enter>",opts)
+-- save file
+keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>", opts)
 
 -- Normal --
 -- Better window navigation
@@ -40,7 +40,7 @@ keymap("n", "<escape>l", "<C-w>l", opts)
 -- My keybindings
 keymap("n", "<escape>e", ":q <Enter>", opts)
 keymap("n", "qwq", ":wq <Enter>", opts)
-keymap("n", "<escape>q", ":qa! <Enter>", opts) -- force quit without saving  
+keymap("n", "<escape>q", ":qa! <Enter>", opts) -- force quit without saving
 keymap("n", "qw", ":w <Enter>", opts)
 
 -- Resize with arrows
@@ -80,13 +80,14 @@ keymap("t", "<escape>", "<C-\\><C-N>", term_opts)
 
 
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<escape>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<escape>f",
+  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+  opts)
 keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Bufferline
-keymap("n", "<C-w>", ":Bdelete<cr>",opts)
+keymap("n", "<C-w>", ":Bdelete<cr>", opts)
 
-keymap("n", "<leader>l", ":Format<cr>", opts)
 keymap("n", "<leader>u", ":UndotreeToggle <cr>", opts)

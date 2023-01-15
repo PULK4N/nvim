@@ -1,7 +1,6 @@
-local colorscheme = "darkplus"
-
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
-end
+vim.cmd "autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE"
+vim.cmd "autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE"
+vim.cmd "autocmd ColorScheme * highlight Todo   ctermbg=NONE guibg=NONE"
+vim.cmd "colorscheme darkplus"
+vim.cmd "set termguicolors"
+vim.cmd "set background=dark"
