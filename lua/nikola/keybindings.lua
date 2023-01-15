@@ -37,11 +37,13 @@ keymap("n", "<escape>j", "<C-w>j", opts)
 keymap("n", "<escape>k", "<C-w>k", opts)
 keymap("n", "<escape>l", "<C-w>l", opts)
 
+
+keymap("n", "<leader>h", ":15 split <Enter>:set winfixheight<Enter>:terminal <Enter>", opts)
+keymap("n", "<leader>v", ":vsplit <Enter>", opts)
 -- My keybindings
 keymap("n", "<escape>e", ":q <Enter>", opts)
 keymap("n", "qwq", ":wq <Enter>", opts)
 keymap("n", "<escape>q", ":qa! <Enter>", opts) -- force quit without saving
-keymap("n", "qw", ":w <Enter>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -88,6 +90,7 @@ keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Bufferline
-keymap("n", "<C-w>", ":Bdelete<cr>", opts)
+keymap("n", "<C-w>", ":bd!<cr>", opts)
+keymap("t", "<C-w>", ":q!<cr>", opts)
 
 keymap("n", "<leader>u", ":UndotreeToggle <cr>", opts)
