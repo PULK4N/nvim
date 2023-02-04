@@ -13,4 +13,6 @@ require("nikola/nvim-tree")
 require("nikola/bufferline")
 require("nikola/lualine")
 require("nikola/colorizer")
-
+require("nikola/project")
+require("nikola/indentline")
+require("nikola/impatient")
