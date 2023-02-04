@@ -38,7 +38,6 @@ keymap("n", "<escape>k", "<C-w>k", opts)
 keymap("n", "<escape>l", "<C-w>l", opts)
 
 
-keymap("n", "<leader>h", ":15 split <Enter>:set winfixheight<Enter>:terminal <Enter>", opts)
 keymap("n", "<leader>v", ":vsplit <Enter>", opts)
 -- My keybindings
 keymap("n", "<escape>e", ":q <Enter>", opts)
@@ -80,6 +79,11 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("t", "<escape>", "<C-\\><C-N>", term_opts)
 
+keymap("n", "<leader>h", ":15 split <Enter>:set winfixheight<Enter>:terminal <Enter>", opts)
+
+keymap("n", "<C-t>", ":terminal <Enter>:NvimTreeToggle<cr>", opts)
+
+-- Telescope
 
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<escape>f",

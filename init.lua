@@ -12,4 +12,5 @@ require("nikola/gitsigns")
 require("nikola/nvim-tree")
 require("nikola/bufferline")
 require("nikola/lualine")
+require("nikola/colorizer")
 
