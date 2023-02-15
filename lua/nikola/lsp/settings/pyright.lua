@@ -2,24 +2,24 @@
 return {
   settings = {
     python = {
-      pythonPath = vim.env.HOME .. '/.flask-ml-azure/bin/python',
+      pythonPath = '/home/nikola/.advanced-testing-techniques/bin/python',
       analysis = {
         extraPaths = {
-          vim.env.HOME .. '/.flask-ml-azure/lib/python3.10/site-packages',
+          '/home/nikola/.advanced-testing-techniques/lib/python3.10/site-packages',
         },
       },
     },
   },
 }
 --[[ return { ]]
---[[   settings = { ]]
---[[     python = { ]]
---[[       pythonPath = vim.env.HOME .. '/.flask-ml-azure/bin/python', ]]
---[[       analysis = { ]]
---[[         extraPaths = { ]]
---[[           vim.env.HOME .. '/.flask-ml-azure/lib/python3.10/site-packages', ]]
+--[[     settings = { ]]
+--[[         Python = { ]]
+--[[             analysis = { ]]
+--[[                 extraPaths = { ]]
+--[[                     "/home/nikola/.advanced-testing-techniques/lib/python3.10/site-packages/", ]]
+--[[                 }, ]]
+--[[             }, ]]
 --[[         }, ]]
---[[       }, ]]
 --[[     }, ]]
---[[   }, ]]
 --[[ } ]]
+--[[]]
