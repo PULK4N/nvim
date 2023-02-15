@@ -94,7 +94,7 @@ keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Bufferline
-keymap("n", "<C-w>", ":bd!<cr>", opts)
-keymap("t", "<C-w>", ":q!<cr>", opts)
+keymap("n", "<escape>w", ":bd!<cr>", opts)
+keymap("t", "<escape>w", ":q!<cr>", opts)
 
 keymap("n", "<leader>u", ":UndotreeToggle <cr>", opts)
