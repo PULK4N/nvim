@@ -82,7 +82,6 @@ return packer.startup(function(use)
   --[[ use { "RRethy/vim-illuminate" } ]]
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
-  use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Treesitter
   use {

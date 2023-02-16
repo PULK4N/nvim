@@ -16,5 +16,7 @@ require("nikola/colorizer")
 require("nikola/project")
 require("nikola/indentline")
 require("nikola/impatient")
+require("nikola/coc")
 --[[ require("nikola/illuminate") ]]
---[[ vim.cmd([[autocmd BufNewFile,BufRead *.log set filetype=log]] --)
+--[[ vim.cmd([[autocmd BufNewFile,BufRead *.log set filetype=log]]
+--)
