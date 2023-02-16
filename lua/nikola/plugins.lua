@@ -75,8 +75,10 @@ return packer.startup(function(use)
 
   -- LSP
   use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
-  use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" } -- simple to use language server installer ]]
-  use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  --[[ use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" } -- simple to use language server installer ]]
+  --[[ use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" } ]]
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   -- Illuminate may slowdown vim in some files
   --[[ use { "RRethy/vim-illuminate" } ]]
@@ -101,7 +103,6 @@ return packer.startup(function(use)
     commit = "a52f078026b27694d2290e34efa61a6e4a690621"
   }
 
-  use 'neoclide/coc.nvim'
 
   -- Vim spector
   --[[ use 'puremourning/vimspector' ]]
