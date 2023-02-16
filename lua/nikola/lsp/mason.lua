@@ -7,6 +7,8 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "omnisharp",
+  "prettier"
 }
 
 local settings = {
