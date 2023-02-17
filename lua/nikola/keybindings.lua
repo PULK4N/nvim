@@ -18,6 +18,9 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- when going to the end of the file, set the last line to the middle of the screen
+keymap("n", "<S-g>", "<S-g>zz", opts)
+
 -- copy whole file
 keymap("n", "<leader>y", "gg^vG$y", opts)
 
