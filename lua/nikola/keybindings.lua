@@ -36,7 +36,7 @@ keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>"
 -- custom
 keymap("n", "<leader>/", ':nohlsearch<CR>', opts)
 keymap("n", ";", '$a;<escape>', opts)
-keymap("n", ";", '$a;<escape>', opts)
+keymap("n", ",", '$a,<escape>', opts)
 
 -- Normal --
 -- Better window navigation
