@@ -33,13 +33,19 @@ keymap("n", "<leader>p", "gg^vG$p", opts)
 -- save file
 keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>", opts)
 
+-- custom
+keymap("n", "<leader>/", ':nohlsearch<CR>', opts)
+keymap("n", ";", '$a;<escape>', opts)
+keymap("n", ";", '$a;<escape>', opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<escape>h", "<C-w>h", opts)
 keymap("n", "<escape>j", "<C-w>j", opts)
 keymap("n", "<escape>k", "<C-w>k", opts)
 keymap("n", "<escape>l", "<C-w>l", opts)
-
+keymap("n", "<escape>u", "<C-u>", opts)
+keymap("n", "<escape>d", "<C-d>", opts)
 
 keymap("n", "<leader>v", ":vsplit <Enter>", opts)
 -- My keybindings
@@ -66,6 +72,8 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+keymap("v", "\"", 'c""<Esc>P', opts)
+keymap("v", "\'", "c''<Esc>P", opts)
 
 -- Visual Block --
 -- Move text up and down
