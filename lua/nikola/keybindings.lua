@@ -37,21 +37,24 @@ keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>"
 keymap("n", "<leader>/", ':nohlsearch<CR>', opts)
 keymap("n", ";", '$a;<escape>', opts)
 keymap("n", ",", '$a,<escape>', opts)
+keymap("i", "jk", '<escape>', opts)
+keymap("i", "kj", '<escape>', opts)
+
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<escape>h", "<C-w>h", opts)
-keymap("n", "<escape>j", "<C-w>j", opts)
-keymap("n", "<escape>k", "<C-w>k", opts)
-keymap("n", "<escape>l", "<C-w>l", opts)
-keymap("n", "<escape>u", "<C-u>", opts)
-keymap("n", "<escape>d", "<C-d>", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-u>", "<C-u>", opts)
+keymap("n", "<C-d>", "<C-d>", opts)
 
 keymap("n", "<leader>v", ":vsplit <Enter>", opts)
 -- My keybindings
-keymap("n", "<escape>e", ":q <Enter>", opts)
+keymap("n", "<C-e>", ":q <Enter>", opts)
 keymap("n", "qwq", ":wq <Enter>", opts)
-keymap("n", "<escape>q", ":qa! <Enter>", opts) -- force quit without saving
+keymap("n", "<C-q>", ":qa! <Enter>", opts) -- force quit without saving
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -88,7 +91,7 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-keymap("t", "<escape>", "<C-\\><C-N>", term_opts)
+keymap("t", ";", "<C-\\><C-N>", term_opts)
 
 keymap("n", "<leader>h", ":15 split <Enter>:set winfixheight<Enter>:terminal <Enter>", opts)
 
@@ -97,15 +100,15 @@ keymap("n", "<C-t>", ":terminal <Enter>:NvimTreeToggle<cr>", opts)
 -- Telescope
 
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<escape>f",
+keymap("n", "<C-f>",
   "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
   opts)
-keymap("n", "<escape>t", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Bufferline
-keymap("n", "<escape>w", ":bd!<cr>", opts)
-keymap("t", "<escape>w", ":q!<cr>", opts)
+keymap("n", "<C-w>", ":bd!<cr>", opts)
+keymap("t", "<C-w>", ":q!<cr>", opts)
 
 keymap("n", "<leader>u", ":UndotreeToggle <cr>", opts)
