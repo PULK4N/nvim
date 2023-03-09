@@ -37,8 +37,6 @@ keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>"
 keymap("n", "<leader>/", ':nohlsearch<CR>', opts)
 keymap("n", ";", '$a;<escape>', opts)
 keymap("n", ",", '$a,<escape>', opts)
-keymap("i", "jk", '<escape>', opts)
-keymap("i", "kj", '<escape>', opts)
 
 
 -- Normal --
