@@ -48,6 +48,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-u>", "<C-u>", opts)
 keymap("n", "<C-d>", "<C-d>", opts)
 
+-- obsolete because of tmux
 keymap("n", "<leader>v", ":vsplit <Enter>", opts)
 -- My keybindings
 keymap("n", "<C-e>", ":q <Enter>", opts)
@@ -75,6 +76,10 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 keymap("v", "\"", 'c""<Esc>P', opts)
 keymap("v", "\'", "c''<Esc>P", opts)
+keymap("v", "`", "c``<Esc>P", opts)
+keymap("v", "]", "c[]<Esc>P", opts)
+keymap("v", ")", "c()<Esc>P", opts)
+keymap("v", "}", "c{}<Esc>P", opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -85,10 +90,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+--[[ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts) ]]
+--[[ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts) ]]
+--[[ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts) ]]
+--[[ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts) ]]
 keymap("t", ";", "<C-\\><C-N>", term_opts)
 
 keymap("n", "<leader>h", ":15 split <Enter>:set winfixheight<Enter>:terminal <Enter>", opts)

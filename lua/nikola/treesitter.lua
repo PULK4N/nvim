@@ -5,7 +5,7 @@ end
 
 configs.setup {
   ensure_installed = { "css", "scss", "dockerfile",
-    "typescript" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    "typescript", "c_sharp" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {

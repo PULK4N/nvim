@@ -19,4 +19,3 @@ require("nikola/impatient")
 --[[ require("nikola/coc") ]]
 --[[ require("nikola/illuminate") ]]
 --[[ vim.cmd([[autocmd BufNewFile,BufRead *.log set filetype=log]]
---)
