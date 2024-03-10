@@ -31,7 +31,8 @@ keymap("n", "<leader>d", "gg^vG$d", opts)
 keymap("n", "<leader>p", "gg^vG$p", opts)
 
 -- save file
-keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>", opts)
+-- keymap("n", "<leader>s", ":w <Enter>:lua vim.lsp.buf.format() <Enter>:w <Enter>", opts)
+keymap("n", "<leader>s", ":w <Enter>", opts)
 
 -- custom
 keymap("n", "<leader>/", ':nohlsearch<CR>', opts)
